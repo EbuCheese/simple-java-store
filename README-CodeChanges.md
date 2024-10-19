@@ -21,4 +21,9 @@
 - Line 55-58: Added mapping for about page
 
 **``E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.``**
-- dd
+
+**BootStrapData.java:**
+- Line 42-45: Added logic to clear out products and parts for testing
+- Line 49-80: Added logic to check if inhouse-part repository is empty, and then create + add 5 inhouse sample parts
+- Line 82-119: Added logic to check if part outsourced-repository is empty, and then create + add 5 outsourced sample parts
+- Line 122-134: Added logic to check if product repository is empty, and then create + add 5 sample products
