@@ -12,16 +12,16 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("1")
 public class InhousePart extends Part{
-    int partId;
+    private Long partId;
 
     public InhousePart() {
     }
 
-    public int getPartId() {
+    public Long getPartId() {
         return partId;
     }
 
-    public void setPartId(int partId) {
+    public void setPartId(Long partId) {
         this.partId = partId;
     }
 }

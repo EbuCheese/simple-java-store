@@ -42,3 +42,37 @@
 **productoos.html (created):**
 - Line 1-10: Added logic to display message to user that product is oos, and allow to return home
 
+**``G.  Modify the parts to track maximum and minimum inventory by doing the following: Add additional fields to the part entity for maximum and minimum inventory. Modify the sample inventory to include the maximum and minimum fields. Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values. Rename the file the persistent storage is saved to. Modify the code to enforce that the inventory is between or at the minimum and maximum value.``**
+
+**Part.java:**
+- Line 34-40: Added additional fields to the part entity for maximum and minimum inventory.
+- Line 58-65: Created overloaded constructor which includes the min and max inventory parameters
+- Line 115-137: Added setters & getters for both min and max inventory, also added logic to check if values are in bounds
+- Line 98-104: Modified setInv method to check if inv is within the bounds of min and max
+
+**BootStrapData.java:**
+- Line 53,61,69,77,85: Added Id's for inhouse sample parts
+- Line 54,55,62,63,70,71,78,79,86,87,103,104,106,111,112,119,120,127,128,135,136: Added min and max inventory for both inhouse and outsourced parts
+
+**AddInHousePartController.java:**
+-Line 45-48: Added logic to make sure inhouse inv does not go above or below what user set (within program bounds) 
+
+**AddOutsourcedPartController.java:**
+-Line 45-48: Added logic to make sure outsourced inv does not go above or below what user set (within program bounds) 
+
+**InhousePartForm.html:**
+- Line 24: Changes partId to Id so it can be reflected on the form
+- Line 26-31: added text inputs for min and max inventory for inhouse parts, also added error message if input out of bounds
+
+**OutsourcedPartForm.html:**
+- Line 27-32: added text inputs for min and max inventory for outsourced parts, also added error message if input out of bounds
+
+**InhousePart.java:**
+- Line 15,20,24: changed int to Long to prevent null issues and help if longer ids are needed down the line
+
+**InhousePartTest.java:**
+- Line 28,35: changed int to Long to prevent conflict with the regular class
+
+**application.properties:**
+- Line 6: Renamed the persistent storage file
+
