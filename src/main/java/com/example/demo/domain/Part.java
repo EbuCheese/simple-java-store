@@ -99,7 +99,7 @@ public abstract class Part implements Serializable {
         if (inv >= this.minInv && inv <= this.maxInv) {
             this.inv = inv;
         } else {
-            throw new IllegalArgumentException("Your input below dictates inventory must be between " + this.minInv + " and " + this.maxInv);
+            throw new IllegalArgumentException("The program dictates inventory must be between " + this.minInv + " and " + this.maxInv);
         }
     }
 
@@ -119,7 +119,8 @@ public abstract class Part implements Serializable {
     public void setMinInv(Integer minInv) {
        if (minInv >= 2 && minInv <= this.maxInv) {
             this.minInv = minInv;
-        } else {
+        } 
+        else {
             throw new IllegalArgumentException("Minimum inventory must be between 2 and " + this.maxInv);
         }
     }
@@ -131,7 +132,8 @@ public abstract class Part implements Serializable {
     public void setMaxInv(Integer maxInv) {
         if (maxInv <= 150 && maxInv >= this.minInv) {
             this.maxInv = maxInv;
-        } else {
+        } 
+        else {
             throw new IllegalArgumentException("Maximum inventory must be between " + this.minInv + " and 150");
         }
     }

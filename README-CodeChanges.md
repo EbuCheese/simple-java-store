@@ -76,3 +76,15 @@
 **application.properties:**
 - Line 6: Renamed the persistent storage file
 
+**``H.  Add validation for between or at the maximum and minimum fields. The validation must include the following: Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts. Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum. Display error messages when adding and updating parts if the inventory is greater than the maximum.``**
+
+>- NOTE: Logic for displaying error messages for updating 'part' inventory going out of bounds was pushed in the last part (see controllers and part.java)
+
+**EnufPartsValidator.java:**
+- Line 30-49: Cleaned up logic to check for inventory change when user tries to update 'product' inventory and assocaiated part goes below min bounds
+
+**about.html:**
+- Line 19,26: Fixed some errors with brand name
+
+**Part.java:**
+- Line 102: Changed the error text so user can differentiate between the 2 errors

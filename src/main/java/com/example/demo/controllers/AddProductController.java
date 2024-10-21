@@ -75,7 +75,7 @@ public class AddProductController {
         else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if(product.getId()!=0) {
-                Product product2 = repo.findById((int) product.getId());
+                Product product2 = repo.findById((int) product.getId()); 
                 PartService partService1 = context.getBean(PartServiceImpl.class);
                 if(product.getInv()- product2.getInv()>0) {
                     for (Part p : product2.getParts()) {
