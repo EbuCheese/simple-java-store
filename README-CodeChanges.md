@@ -93,3 +93,7 @@
 
 **PartTest.java:**
 - Line 106-138: Added logic for testing if inventory is within bounds and throw error if not
+
+**``J.  Remove the class files for any unused validators in order to clean your code.``**
+
+> - NOTE: All validators are currently in use
