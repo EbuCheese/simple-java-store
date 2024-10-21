@@ -88,3 +88,8 @@
 
 **Part.java:**
 - Line 102: Changed the error text so user can differentiate between the 2 errors
+
+**``I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.``**
+
+**PartTest.java:**
+- Line 106-138: Added logic for testing if inventory is within bounds and throw error if not

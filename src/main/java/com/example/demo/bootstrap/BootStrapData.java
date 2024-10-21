@@ -40,9 +40,9 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
     // Clear the repositories (for testing only)
-    partRepository.deleteAll();
-    outsourcedPartRepository.deleteAll();
-    productRepository.deleteAll();
+        // partRepository.deleteAll();
+        // outsourcedPartRepository.deleteAll();
+        // productRepository.deleteAll();
 
     // Check if Inhouse Parts repository is empty
     if (partRepository.count() == 0) {

@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Project: demoDarbyFrameworks2-master
@@ -99,6 +100,41 @@ class PartTest {
         assertEquals(inv,partIn.getInv());
         partOut.setInv(inv);
         assertEquals(inv,partOut.getInv());
+    }
+
+    //testing for min inventory
+    @Test
+    void testSetMinInv() {
+        try {
+            partIn.setMinInv(3); // Valid input
+            System.out.println("Minimum inventory set successfully to: " + partIn.getMinInv());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error setting minimum inventory: " + e.getMessage());
+        }
+
+        try {
+            partIn.setMinInv(1); // Invalid input
+            System.out.println("Minimum inventory set successfully to: " + partIn.getMinInv());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error setting minimum inventory: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testSetMaxInv() {
+        try {
+            partIn.setMaxInv(100); // Valid input
+            System.out.println("Maximum inventory set successfully to: " + partIn.getMaxInv());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error setting maximum inventory: " + e.getMessage());
+        }
+
+        try {
+            partIn.setMaxInv(160); // Invalid input
+            System.out.println("Maximum inventory set successfully to: " + partIn.getMaxInv());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error setting maximum inventory: " + e.getMessage());
+        }
     }
 
     @Test
